@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Nnotum personal portfolio — frontend developer and UI/UX designer creating responsive websites, polished interfaces, and modern digital experiences.">
+    <meta name="author" content="Nnotum Otitodirichukwu Micheal">
+    <meta name="keywords" content="Michael Nnotum personal portfolio, Michael Nnotum, Nnotum Michael, personal portfolio, frontend developer, UI/UX designer, portfolio website, Lagos designer, web design portfolio">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="application-name" content="Michael Nnotum Personal Portfolio">
+    <meta name="theme-color" content="#07111f">
+    <link rel="canonical" href="https://otitopersonalportifolio.edgeone.dev/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" title="LLMs.txt" href="/llms.txt">
+    <link rel="alternate" type="text/markdown" title="Markdown version" href="/index.html.md">
+    <meta property="og:title" content="Michael Nnotum Personal Portfolio | Frontend Developer & UI/UX Designer">
+    <meta property="og:description" content="Michael Nnotum personal portfolio featuring responsive websites, UI concepts, and polished digital experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otitopersonalportifolio.edgeone.dev/">
+    <meta property="og:image" content="https://otitopersonalportifolio.edgeone.dev/my%20main%20pic%202.png">
+    <meta property="og:image:alt" content="Portrait of Nnotum Otitodirichukwu Micheal">
+    <meta property="og:site_name" content="Michael Nnotum Personal Portfolio">
+    <meta property="og:locale" content="en_NG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Michael Nnotum Personal Portfolio | Frontend Developer & UI/UX Designer">
+    <meta name="twitter:description" content="Michael Nnotum personal portfolio of a frontend developer and UI/UX designer.">
+    <meta name="twitter:image" content="https://otitopersonalportifolio.edgeone.dev/my%20main%20pic%202.png">
+    <meta name="twitter:image:alt" content="Portrait of Nnotum Otitodirichukwu Micheal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>Michael Nnotum Personal Portfolio | Frontend Developer &amp; UI/UX Designer</title>
+    <link rel="icon" href="Personal branding design for Nnotum Michael.png" type="image/png">
+    <style>
+        :root {
+            --bg: #07111f;
+            --panel: #0f1b31;
+            --panel-2: #13233d;
+            --text: #f5f7fb;
+            --muted: #b8c3d8;
+            --accent: #ff6b35;
+            --accent-2: #00b7ff;
+            --white: #ffffff;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+            --radius: 22px;
+            --container: min(1180px, calc(100% - 2rem));
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(0, 183, 255, 0.18), transparent 22%),
+                radial-gradient(circle at top right, rgba(255, 107, 53, 0.18), transparent 24%),
+                linear-gradient(180deg, #07111f 0%, #091321 100%);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(14px);
+            background: rgba(7, 17, 31, 0.75);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .navbar {
+            width: var(--container);
+            margin: 0 auto;
+            padding: 0.9rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .logo-svg {
+            width: 72px;
+            height: 72px;
+            flex: 0 0 auto;
+            animation: logoPulse 4.8s ease-in-out infinite;
+            transform-origin: center;
+            filter: drop-shadow(0 0 12px rgba(255, 107, 53, 0.24));
+        }
+
+        .logo-text h2 {
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            line-height: 1.2;
+            overflow-wrap: anywhere;
+        }
+
+        .logo-text p {
+            margin: 0.2rem 0 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1.15rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--white);
+        }
+
+        .nav-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            padding: 0.3rem;
+        }
+
+        main {
+            width: var(--container);
+            margin: 0 auto;
+        }
+
+        .beginning,
+        .list,
+        .projects,
+        .contact {
+            padding: 4.5rem 0;
+        }
+
+        .beginning {
+            position: relative;
+            min-height: calc(100vh - 90px);
+            display: grid;
+            align-items: center;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(118deg, rgba(7, 17, 31, 0.82), rgba(7, 17, 31, 0.72)),
+                radial-gradient(circle at center, rgba(255, 107, 53, 0.18), transparent 50%);
+            border-radius: 30px;
+            z-index: -1;
+        }
+
+        .hero-shell {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .content {
+            max-width: 700px;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-size: 0.78rem;
+            color: #86d9ff;
+            font-weight: 700;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 1rem;
+            line-height: 1.12;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4.4rem);
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 3vw, 2.6rem);
+        }
+
+        .hero-copy,
+        .section-intro,
+        .about-panel p,
+        .project-copy p,
+        .contact-info p,
+        .contact-card li span:last-child,
+        .hero-card-copy p {
+            color: var(--muted);
+        }
+
+        .hero-actions,
+        .contact-actions,
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin-top: 1.35rem;
+        }
+
+        .btn,
+        .project-link,
+        .website-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.15rem;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn,
+        .website-link {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-secondary,
+        .project-link {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--white);
+        }
+
+        .btn:hover,
+        .btn:focus-visible,
+        .project-link:hover,
+        .website-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .hero-highlights li {
+            display: grid;
+            gap: 0.25rem;
+            padding: 1rem 1.1rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .hero-highlights strong {
+            font-size: 1rem;
+        }
+
+        .hero-highlights span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-card,
+        .about-panel,
+        .project-card,
+        .contact-card,
+        .contact-info {
+            background: rgba(10, 18, 35, 0.78);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .hero-card {
+            overflow: hidden;
+        }
+
+        .hero-card:hover,
+        .about-panel:hover,
+        .project-card:hover,
+        .contact-card:hover,
+        .contact-info:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 24px 42px rgba(0, 0, 0, 0.34);
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .hero-card img {
+            width: 100%;
+            aspect-ratio: 4 / 4.5;
+            object-fit: cover;
+            background: #0d1628;
+        }
+
+        .hero-card-copy {
+            padding: 1.2rem 1.2rem 1.4rem;
+        }
+
+        .hero-card-label,
+        .project-type {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.72rem;
+            color: #84d7ff;
+            font-weight: 700;
+        }
+
+        .section-heading {
+            margin-bottom: 2rem;
+        }
+
+        .about-grid,
+        .projects-grid,
+        .contact-grid {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .about-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .about-panel,
+        .contact-info,
+        .contact-card {
+            padding: 1.35rem;
+        }
+
+        .info-list,
+        .contact-list {
+            margin: 1rem 0 0;
+            padding-left: 1.1rem;
+            color: var(--muted);
+        }
+
+        .brand-panel img {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: 1rem;
+        }
+
+        .chip-list span {
+            border-radius: 999px;
+            padding: 0.45rem 0.8rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #d8e7ff;
+            font-size: 0.92rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .project-card {
+            overflow: hidden;
+        }
+
+        .project-media {
+            background: #0b1424;
+        }
+
+        .project-media img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-media--contain img {
+            object-fit: contain;
+            padding: 1rem;
+        }
+
+        .project-copy {
+            padding: 1.15rem 1.15rem 1.3rem;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-list li {
+            display: grid;
+            gap: 0.25rem;
+        }
+
+        .contact-label {
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        footer {
+            width: var(--container);
+            margin: 0 auto;
+            padding: 1.4rem 0 2rem;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        @keyframes logoPulse {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            35% {
+                transform: translateY(-6px) rotate(-2deg) scale(1.03);
+            }
+            65% {
+                transform: translateY(-3px) rotate(2deg) scale(1.01);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-shell,
+            .about-grid,
+            .projects-grid,
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .beginning {
+                min-height: auto;
+                padding-top: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .logo-container {
+                max-width: 100%;
+            }
+
+            .logo-text {
+                min-width: 0;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1rem;
+                background: rgba(7, 17, 31, 0.98);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 16px;
+                position: absolute;
+                top: calc(100% + 0.5rem);
+                left: 0;
+            }
+
+            .navbar.open .nav-links {
+                display: flex;
+            }
+
+            .hero-shell,
+            .about-grid,
+            .projects-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .beginning,
+            .list,
+            .projects,
+            .contact {
+                padding: 3rem 0;
+            }
+
+            .logo-text h2 {
+                font-size: 0.95rem;
+            }
+
+            .logo-text p {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            :root {
+                --container: min(100% - 1rem, 1180px);
+            }
+
+            .site-header,
+            .navbar,
+            main,
+            footer {
+                width: 100%;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .logo-container {
+                max-width: calc(100% - 48px);
+            }
+
+            .logo-text {
+                min-width: 0;
+            }
+
+            .logo-text h2 {
+                white-space: normal;
+                font-size: 0.88rem;
+            }
+
+            .hero-actions,
+            .contact-actions,
+            .project-actions {
+                flex-direction: column;
+            }
+
+            .btn,
+            .project-link,
+            .website-link {
+                width: 100%;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://otitopersonalportifolio.edgeone.dev/#person",
+                    "name": "Nnotum Otitodirichukwu Micheal",
+                    "alternateName": ["Nnotum Michael", "Michael Nnotum"],
+                    "jobTitle": "Frontend Developer and UI/UX Designer",
+                    "description": "Frontend developer and UI/UX designer creating responsive websites and polished interface concepts.",
+                    "url": "https://otitopersonalportifolio.edgeone.dev/",
+                    "image": "https://otitopersonalportifolio.edgeone.dev/my%20main%20pic%202.png",
+                    "email": "nnotummichael@gmail.com",
+                    "telephone": "+2348027339442",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "100 Boundary Road",
+                        "addressLocality": "Shasha",
+                        "addressRegion": "Lagos",
+                        "addressCountry": "NG"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "professional",
+                        "email": "nnotummichael@gmail.com",
+                        "telephone": "+2348027339442",
+                        "areaServed": "NG",
+                        "availableLanguage": ["English"]
+                    },
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "Freelance"
+                    },
+                    "knowsAbout": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "Responsive Design",
+                        "UI/UX Design",
+                        "Figma"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://otitopersonalportifolio.edgeone.dev/#website",
+                    "url": "https://otitopersonalportifolio.edgeone.dev/",
+                    "name": "Nnotum Otitodirichukwu Micheal",
+                    "description": "Portfolio website for a frontend developer and UI/UX designer.",
+                    "publisher": {
+                        "@id": "https://otitopersonalportifolio.edgeone.dev/#person"
+                    },
+                    "about": {
+                        "@id": "https://otitopersonalportifolio.edgeone.dev/#person"
+                    },
+                    "mainEntity": {
+                        "@id": "https://otitopersonalportifolio.edgeone.dev/#person"
+                    },
+                    "inLanguage": "en"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "@id": "https://otitopersonalportifolio.edgeone.dev/#portfolio",
+                    "name": "Nnotum Otitodirichukwu Micheal Portfolio",
+                    "about": "Frontend developer and UI/UX designer portfolio featuring responsive websites, UI concepts, and branding work.",
+                    "author": {
+                        "@id": "https://otitopersonalportifolio.edgeone.dev/#person"
+                    },
+                    "url": "https://otitopersonalportifolio.edgeone.dev/",
+                    "genre": "Portfolio",
+                    "inLanguage": "en"
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="logo-container" href="#home">
+                <div class="logo-badge" aria-label="MN logo">
+                    <img class="logo-mark" src="mn%20logo.png" alt="MN logo" width="72" height="72">
+                </div>
+                <div class="logo-text">
+                    <h2>Nnotum Otitodirichukwu Micheal</h2>
+                    <p>Frontend developer, Python Developer and UI/UX designer</p>
+                </div>
+            </a>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="beginning">
+            <div class="bg-overlay" aria-hidden="true"></div>
+            <div class="hero-shell">
+                <div class="content">
+                    <p class="eyebrow">Frontend Developer • UI/UX Designer</p>
+                    <h1>I build responsive websites and clean interfaces that feel easy to use.</h1>
+                    <p class="hero-copy">I'm Nnotum Otitodirichukwu Micheal, and I enjoy turning ideas into modern digital experiences with thoughtful UI, clear structure, and user-friendly front-end development.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li>
+                            <strong>Responsive builds</strong>
+                            <span>Layouts designed to feel polished on desktop, tablet, and mobile.</span>
+                        </li>
+                        <li>
+                            <strong>UI thinking</strong>
+                            <span>Interfaces shaped around clarity, hierarchy, and a smooth user journey.</span>
+                        </li>
+                        <li>
+                            <strong>Creative execution</strong>
+                            <span>From Figma concepts to finished front-end pages, with attention to detail.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="hero-card">
+                    <img src="personal brand.jpg" alt="Portrait of Nnotum Otitodirichukwu Micheal" loading="eager">
+                    <div class="hero-card-copy">
+                        <p class="hero-card-label">Now building</p>
+                        <h2>Interfaces that balance brand style with usability.</h2>
+                        <p>Focused on websites, landing pages, design concepts, and front-end experiences that look sharp and stay practical.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about" class="list">
+            <div class="section-heading">
+                <p class="eyebrow">About Me</p>
+                <h2>Designing and developing work that is both functional and visually appealing.</h2>
+                <p class="section-intro">I enjoy taking an idea from rough concept to polished interface. My workflow combines structure, clean code, and UI decisions that make a product feel easier to understand and use.</p>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-panel">
+                    <h3>What I do</h3>
+                    <p>I create responsive websites, landing pages, and interface concepts with a focus on usability, visual consistency, and smooth browsing across devices.</p>
+                    <ul class="info-list">
+                        <li>Responsive front-end development</li>
+                        <li>UI layout and interaction design</li>
+                        <li>Prototype and visual concept design</li>
+                    </ul>
+                </article>
+
+                <article class="about-panel">
+                    <h3>How I work</h3>
+                    <p>I like clear layouts, readable content, and experiences that guide people naturally. I keep improving by building projects, refining details, and learning what makes digital products feel stronger.</p>
+                    <div class="chip-list" aria-label="Skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>Figma</span>
+                        <span>UI/UX</span>
+                    </div>
+                </article>
+
+                <article class="about-panel brand-panel">
+                    <img src="personal brand.jpg" alt="Personal branding design preview" loading="lazy">
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2>Projects and interface concepts from my portfolio.</h2>
+                <p class="section-intro">These previews highlight websites, UI concepts, and design explorations that show how I approach layout, presentation, and product feel.</p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="kemomemtrading.png" alt="Kemomem Trading project preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Live Website</span>
+                        <h3>Kemomem Trading</h3>
+                        <p>A trading-focused website concept with a professional presentation and strong visual structure.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="kemomemtrading.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://kemomemtradingandexports.edgeone.dev/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="figma%20nice.png" alt="Sign up page mockup preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Prototype</span>
+                        <h3>Sign Up Page</h3>
+                        <p>A clean sign up flow focused on spacing, readability, and a clear visual hierarchy.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="figma%20nice.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://www.figma.com/proto/jBpaFcG2gdHTZtXgPRF0Gz/sign-up-page?node-id=1-2&amp;p=f&amp;viewport=274%2C16%2C0.55&amp;t=NC6AQWftCCK5LVdn-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer">Open Prototype</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="figma%20post.png" alt="WhatsApp UI design preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">UI Concept</span>
+                        <h3>WhatsApp UI</h3>
+                        <p>A polished messaging-inspired concept built around familiar patterns and cleaner presentation.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="figma%20post.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://www.figma.com/design/UzCm9UoQ0Uz5ymAxBJ5NGk/whatsapp?node-id=0-1&amp;t=PeqGgGKaiBQne1EN-1" target="_blank" rel="noopener noreferrer">Open Design</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="gist%20talk.png" alt="Gist Talk project preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Live Website</span>
+                        <h3>Gist Talk</h3>
+                        <p>A conversation-driven interface concept presented with a lightweight, modern visual style.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="gist%20talk.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://gist-talk.edgeone.dev/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="opay%202.png" alt="OPay interface project preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Fintech UI</span>
+                        <h3>OPay Interface</h3>
+                        <p>A fintech-inspired screen focused on clarity, familiarity, and easy-to-scan actions.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="opay%202.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://www.figma.com/design/kmGyLfTLKxR256R1Mp2Dbb/opay-logo?node-id=0-1&amp;t=SeAD1yx7cI8pX0r2-1" target="_blank" rel="noopener noreferrer">Open Design</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="my%20main%20pic.png" alt="Otix e-commerce website preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">E-commerce</span>
+                        <h3>Otix Shopping Website</h3>
+                        <p>An e-commerce website preview built to highlight product browsing, sales presentation, and smooth interaction.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="my%20main%20pic.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                            <a class="website-link" href="https://otix-thefutureofshopping.edgeone.dev/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="Screenshot%202026-09-25%20185948.png" alt="General Knowledge Quiz project preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Python Project</span>
+                        <h3>General Knowledge Quiz</h3>
+                        <p>A Python quiz app that asks multiple-choice questions, tracks the score, and gives instant feedback based on the user’s answers.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="Screenshot%202026-09-25%20185948.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="Screenshot%202026-09-25%20190027.png" alt="Random password generator project preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Python Project</span>
+                        <h3>Random Password Generator</h3>
+                        <p>A Python password generator that creates secure random passwords with letters, numbers, and symbols for stronger account protection.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="Screenshot%202026-09-25%20190027.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="coding%20assignment.png" alt="Mobile app quiz prototype preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Mobile UI</span>
+                        <h3>Quiz App Flow</h3>
+                        <p>A mobile-first interaction concept with onboarding, selection, and reading screens designed for clarity and ease.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="coding%20assignment.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="Screenshot%202026-05-02%20102722.png" alt="Fashion product page preview" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">E-commerce UI</span>
+                        <h3>Fashion Product Page</h3>
+                        <p>A polished storefront concept focused on product storytelling, pricing clarity, and a premium shopping feel.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="Screenshot%202026-05-02%20102722.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                        </div>
+                    </div>
+                </article>
+
+               
+                   
+                <article class="project-card">
+                    <div class="project-media project-media--contain">
+                        <img src="Personal%20branding%20design%20for%20Nnotum%20Michael.png" alt="Personal branding design artwork" loading="lazy">
+                    </div>
+                    <div class="project-copy">
+                        <span class="project-type">Branding</span>
+                        <h3>Personal Branding Design</h3>
+                        <p>A personal branding composition that explores identity, presentation, and visual storytelling.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="Personal%20branding%20design%20for%20Nnotum%20Michael.png" target="_blank" rel="noopener noreferrer">Preview File</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="section-heading">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's create something useful, clean, and visually strong.</h2>
+                <p class="section-intro">I'm open to collaborations, freelance work, and opportunities where strong front-end execution and UI thinking matter.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Reach out directly</h3>
+                    <address>
+                        <strong>Nnotum Otitodirichukwu Micheal</strong><br>
+                        100 Shasha Road, Shasha<br>
+                        Alimosho, Lagos
+                    </address>
+                    <p><strong>Phone:</strong> <a href="tel:+2348027339442">+234 802 733 9442</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:nnotummichael@gmail.com">nnotummichael@gmail.com</a></p>
+                    <p><strong>Open to remote Work</strong></p>
+                    <div class="contact-actions">
+                        <a href="mailto:nnotummichael@gmail.com" class="btn">Send an Email</a>
+                        <a href="tel:+2348027339442" class="btn btn-secondary">Call Me</a>
+                        <a href="https://www.linkedin.com/in/michael-nnotum-75a3763a5/" class="btn btn-secondary">My LinkedIn Profile</a>
+                        <a href="http://github.com/otix-glitch/" class="btn btn-secondary">My GitHub Profile</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <h3>What you can contact me for</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Website builds</span>
+                            <span>Landing pages, responsive layouts, and front-end implementation.</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">UI design support</span>
+                            <span>Interface concepts, visual cleanup, and more polished page structure.</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">Collaboration</span>
+                            <span>Design-focused product work, portfolio pieces, and creative partnerships.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nnotum Otitodirichukwu Micheal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (function() {
+            const nav = document.querySelector('.navbar');
+            const button = document.querySelector('.nav-toggle');
+            const links = document.querySelector('.nav-links');
+
+            if (!nav || !button || !links) return;
+
+            function closeNav() {
+                nav.classList.remove('open');
+                button.setAttribute('aria-expanded', 'false');
+            }
+
+            button.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('open');
+                button.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            links.addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    closeNav();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    closeNav();
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    closeNav();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+# Michael Nnotum Personal Portfolio
+
+> Frontend developer and UI/UX designer portfolio showcasing responsive websites, interface concepts, branding work, and direct contact details for freelance work and collaboration.
+
+This site is a single-page portfolio with section anchors for the main content. The homepage is the best starting point for both people and AI tools.
+
+## Main sections
+
+- [Home](https://otitopersonalportifolio.edgeone.dev/): Hero summary and quick introduction.
+- [About](https://otitopersonalportifolio.edgeone.dev/#about): Skills, workflow, and service focus.
+- [Projects](https://otitopersonalportifolio.edgeone.dev/#projects): Selected website and UI work.
+- [Contact](https://otitopersonalportifolio.edgeone.dev/#contact): Email, phone, and collaboration details.
+
+## Reference files
+
+- [Sitemap](https://otitopersonalportifolio.edgeone.dev/sitemap.xml): Indexable URL list for search engines.
+- [Markdown homepage](https://otitopersonalportifolio.edgeone.dev/index.html.md): Clean text version of the homepage for LLMs and agents.
+- [Source HTML](https://otitopersonalportifolio.edgeone.dev/index.html): Primary page markup and structured data.

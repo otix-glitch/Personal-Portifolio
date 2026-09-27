@@ -1,0 +1,559 @@
+:root {
+    --bg: #07111f;
+    --panel: #0f1b31;
+    --panel-2: #13233d;
+    --text: #f5f7fb;
+    --muted: #b8c3d8;
+    --accent: #ff6b35;
+    --accent-2: #00b7ff;
+    --white: #ffffff;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    --radius: 22px;
+    --container: min(1180px, calc(100% - 2rem));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(0, 183, 255, 0.18), transparent 22%),
+        radial-gradient(circle at top right, rgba(255, 107, 53, 0.18), transparent 24%),
+        linear-gradient(180deg, #07111f 0%, #091321 100%);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    backdrop-filter: blur(14px);
+    background: rgba(7, 17, 31, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navbar {
+    width: var(--container);
+    margin: 0 auto;
+    padding: 0.9rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.logo-badge {
+    width: 72px;
+    height: 72px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(0, 183, 255, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 30px rgba(0, 183, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    animation: logoPulse 4.8s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.logo-mark {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: drop-shadow(0 0 16px rgba(255, 107, 53, 0.2));
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.logo-text p {
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--white);
+}
+
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+main {
+    width: var(--container);
+    margin: 0 auto;
+}
+
+.beginning,
+.list,
+.projects,
+.contact {
+    padding: 4.5rem 0;
+}
+
+.beginning {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    display: grid;
+    align-items: center;
+}
+
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(118deg, rgba(7, 17, 31, 0.82), rgba(7, 17, 31, 0.72)),
+        radial-gradient(circle at center, rgba(255, 107, 53, 0.18), transparent 50%);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.hero-shell {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: #86d9ff;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 1rem;
+    line-height: 1.12;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+}
+
+.hero-copy,
+.section-intro,
+.about-panel p,
+.project-copy p,
+.contact-info p,
+.contact-card li span:last-child,
+.hero-card-copy p {
+    color: var(--muted);
+}
+
+.hero-actions,
+.contact-actions,
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.35rem;
+}
+
+.btn,
+.project-link,
+.website-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn,
+.website-link {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-secondary,
+.project-link {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--white);
+}
+
+.btn:hover,
+.btn:focus-visible,
+.project-link:hover,
+.website-link:hover {
+    transform: translateY(-2px);
+}
+
+.hero-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.hero-highlights li {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 1.1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.hero-highlights strong {
+    font-size: 1rem;
+}
+
+.hero-highlights span {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.hero-card,
+.about-panel,
+.project-card,
+.contact-card,
+.contact-info {
+    background: rgba(10, 18, 35, 0.78);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.hero-card {
+    overflow: hidden;
+}
+
+.hero-card:hover,
+.about-panel:hover,
+.project-card:hover,
+.contact-card:hover,
+.contact-info:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 24px 42px rgba(0, 0, 0, 0.34);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-card img {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: cover;
+    background: #0d1628;
+}
+
+.hero-card-copy {
+    padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.hero-card-label,
+.project-type {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    color: #84d7ff;
+    font-weight: 700;
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+}
+
+.about-grid,
+.projects-grid,
+.contact-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.about-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about-panel,
+.contact-info,
+.contact-card {
+    padding: 1.35rem;
+}
+
+.info-list,
+.contact-list {
+    margin: 1rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+}
+
+.brand-panel img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.chip-list span {
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #d8e7ff;
+    font-size: 0.92rem;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-media {
+    background: #0b1424;
+}
+
+.project-media img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-media--contain img {
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.project-copy {
+    padding: 1.15rem 1.15rem 1.3rem;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-list li {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.contact-label {
+    font-weight: 700;
+    color: var(--white);
+}
+
+footer {
+    width: var(--container);
+    margin: 0 auto;
+    padding: 1.4rem 0 2rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+@keyframes logoPulse {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    35% {
+        transform: translateY(-6px) rotate(-2deg) scale(1.03);
+    }
+    65% {
+        transform: translateY(-3px) rotate(2deg) scale(1.01);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-shell,
+    .about-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .beginning {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo-container {
+        max-width: 100%;
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        background: rgba(7, 17, 31, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+    }
+
+    .navbar.open .nav-links {
+        display: flex;
+    }
+
+    .hero-shell,
+    .about-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beginning,
+    .list,
+    .projects,
+    .contact {
+        padding: 3rem 0;
+    }
+
+    .logo-text h2 {
+        font-size: 0.95rem;
+    }
+
+    .logo-text p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 520px) {
+    :root {
+        --container: min(100% - 1rem, 1180px);
+    }
+
+    .site-header,
+    .navbar,
+    main,
+    footer {
+        width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .logo-container {
+        max-width: calc(100% - 48px);
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .logo-text h2 {
+        white-space: normal;
+        font-size: 0.88rem;
+    }
+
+    .hero-actions,
+    .contact-actions,
+    .project-actions {
+        flex-direction: column;
+    }
+
+    .btn,
+    .project-link,
+    .website-link {
+        width: 100%;
+    }
+}
